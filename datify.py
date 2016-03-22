@@ -93,7 +93,7 @@ def get_wx_data(filename):
     for line in wxdata:
         wxdata[index] = [x for x in string.split(line.strip()) if x != '']
         index += 1
-    print wxdata
+    # print wxdata
     return wxdata
 
 def get_all_wx_data():
@@ -151,9 +151,9 @@ def main():
 
     combined_data_table = collections.OrderedDict()
     for month in wx_data:
-        print month
+        # print month
         for day in wx_data[month]:
-            print day[0]
+            # print day[0]
             this_day = datetime.date(2015, monthindex(month), int(day[0]))
             # print this_day
             # print day
@@ -167,7 +167,7 @@ def main():
             combined_data_table['%s_%s' % (month, day[0])] = data
 
     # print_data(combined_data_table)
-    new_print(combined_data_table)
+    # new_print(combined_data_table)
 
 def new_print(table):
     outfile = open('NiceRideDataOut.dat', 'w')

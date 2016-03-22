@@ -167,13 +167,13 @@ def main():
             combined_data_table['%s_%s' % (month, day[0])] = data
 
     # print_data(combined_data_table)
-    # new_print(combined_data_table)
+    new_print(combined_data_table)
 
 def new_print(table):
     outfile = open('NiceRideDataOut.dat', 'w')
     for row in table:
         outfile.write("{'%s': %s}\n" % (row, table[row]))
-        print row, ": ", table[row]
+        # print row, ": ", table[row]
     outfile.close()
 
 def print_data(table):
